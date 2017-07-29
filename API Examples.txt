@@ -1,0 +1,13 @@
+image --->  http://image.tmdb.org/t/p/w500/fn4n6uOYcB6Uh89nbNPoU2w80RV.jpg to save the image
+
+upcoming movies --- > https://api.themoviedb.org/3/movie/upcoming?api_key=d8d94bcf898938939d96dd422b52b026
+
+popular movies ---> https://api.themoviedb.org/3/movie/popular?api_key=d8d94bcf898938939d96dd422b52b026
+
+Top Rated movies ---> https://api.themoviedb.org/3/movie/top_rated?api_key=d8d94bcf898938939d96dd422b52b026
+
+Now Playing Movies --->>https://api.themoviedb.org/3/
+movie/now_playing?api_key=d8d94bcf898938939d96dd422b52b026
+
+
+
