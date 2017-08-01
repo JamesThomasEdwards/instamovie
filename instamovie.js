@@ -5,6 +5,8 @@
 
 
 var movieCategorySelector = "";
+var currentMovieTitle;
+var currentMovieOverview;
 
 $("#getMovie").click(
     getMovie
@@ -12,8 +14,40 @@ $("#getMovie").click(
 $('#pass').click(
     getMovie
 );
+$('#addMovie').click(
+    addMovie
+)
+$('#showWatchlist').click(
+    showWatchlist
+)
 
-function getMovie () {
+function showWatchlist() {
+    var watchlist = {};
+    var database = firebase.database()
+    var movies = database.ref("movies");
+
+    movies.ref.on("value", function (dataSnapshot) {
+        console.log(dataSnapshot.val());
+        watchlist = dataSnapshot.val();
+        console.log(watchlist);
+        for (var list in watchlist) {
+            console.log(watchlist[list].title);
+            $('#watchlist').append('<li>'+watchlist[list].title+'</li>')
+
+        }
+
+    })
+
+}
+function addMovie() {
+    var database = firebase.database()
+    var movies = database.ref("movies");
+    var childRef = movies.push();
+    childRef.set({ title: currentMovieTitle, overview: currentMovieOverview })
+
+}
+
+function getMovie() {
     movieCategorySelector = $("#movieCategory").val();
     var url = 'https://api.themoviedb.org/3/movie/' + movieCategorySelector + '?api_key=d8d94bcf898938939d96dd422b52b026'
     movie(url);
@@ -49,6 +83,9 @@ function movie(url) {
                     $("#voteAverage").text(movie.vote_average);
                     $("#overview").text(movie.overview);
                     $("#posterImage").attr("src", "http://image.tmdb.org/t/p/w500" + movie.poster_path);
+                    currentMovieTitle = movie.title;
+                    currentMovieOverview = movie.overview;
+                    // console.log(currentMovieTitle);
                 }
             })
 

@@ -6,6 +6,21 @@
     <link rel="stylesheet" href="instamovie.css">
 
     <title>title</title>
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCcgb9Vtiizl8QR-GrXb4uWrTOdUqH7Kss",
+            authDomain: "instamovie-89e6e.firebaseapp.com",
+            databaseURL: "https://instamovie-89e6e.firebaseio.com",
+            projectId: "instamovie-89e6e",
+            storageBucket: "instamovie-89e6e.appspot.com",
+            messagingSenderId: "211602683439"
+        };
+        firebase.initializeApp(config);
+
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -15,8 +30,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div>
-            <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-           <span>Instamovie</span>
+                <span><img src="logo.png"></span>
 
             </div>
             <span>Select Movies</span>
@@ -56,6 +70,7 @@
             <div>
                 <button type="sumbit" id="pass">Pass</button>
                 <button type="sumbit" id="addMovie">Add Movie</button>
+                <button type="sumbit" id="showWatchlist">Watch List</button>
             </div>
     </nav>
 
@@ -73,6 +88,10 @@
             <img id="posterImage">
         </div>
     </div>
+    <div id="watchlistContainer">
+        <ol id="watchlist">
+        </ol>
+
     </div>
     </div>
     </nav>
