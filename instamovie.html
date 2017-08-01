@@ -3,14 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="instamovie.css">
+
     <title>title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 </head>
 
 <body>
-    <nav id="navbar">
-        <span>select movies</span>
-        <select id="movieCategory">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div>
+            <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+           <span>Instamovie</span>
+
+            </div>
+            <span>Select Movies</span>
+            <select id="movieCategory">
       <option value="All">All</option>
   <option value="popular">Most Popular</option>
   <option value="top_rated">Top Rated</option>
@@ -18,8 +28,8 @@
   <option value="upcoming">Upcoming</option>
 </select>
 
-        <span> Genre </span>
-        <select id="genre">
+            <span> Genre </span>
+            <select id="genre">
       <option value="All">All</option>
   <option value="Action">Action</option>
   <option value="Adventure">Adventure</option>
@@ -42,12 +52,13 @@
 
   
 </select>
-        <button type="submit" id="getMovie">Get Movie</button>
-        <div>
-            <button type="sumbit" id="pass">Pass</button>
-            <button type="sumbit" id="addMovie">Add Movie</button>
-        </div>
+            <button type="submit" id="getMovie">Get Movie</button>
+            <div>
+                <button type="sumbit" id="pass">Pass</button>
+                <button type="sumbit" id="addMovie">Add Movie</button>
+            </div>
     </nav>
+
     <div id="movie">
         <div id="movieTitle">
 
@@ -58,12 +69,18 @@
         <div id="overview">
 
         </div>
-        <div id = "poster">
-            <img id = "posterImage">
+        <div id="poster">
+            <img id="posterImage">
         </div>
     </div>
+    </div>
+    </div>
+    </nav>
 
+    </div>
     <script src="./instamovie.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
