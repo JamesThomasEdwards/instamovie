@@ -2,3 +2,77 @@
 body { 
     padding-top: 100px; 
     }
+#logo {
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+	font-size: 50px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+    line-height: 50px;
+    color: #008C02;
+    display:inline;
+    margin-right: 50px;
+}
+
+#top-navigation {
+
+    background-color: navy;
+    list-style-type: none;
+    margin: 0;
+    padding: 30px;
+
+}
+
+#topmenu {
+
+    background-color:#081c24;
+    list-style-type: none;
+    margin: 0;
+    padding: 40px;
+
+}
+.movieCategory {
+    display: inline;
+    color: white;
+    font-size: 18px;
+    margin:20px;
+}
+.pass-add{
+    background-color: white;
+    font-family:"Arial Black", "Arial Bold", Gadget, sans-serif;
+    font-size: 25px;
+    border: 2px solid;
+    border-radius: 15px;
+    margin: 30px;
+    width: 100px;
+
+}
+#pass-add-container{
+    text-align: center;
+    background-color: white;
+    
+}
+#topNavigator{
+     position: fixed; /* Set the navbar to fixed position */
+    top: 0;
+    width: 100%; /* Full width */
+
+}
+
+#movie{
+    margin-top: 140px;
+    width:800px;
+}
+.poster-desc{
+    display: inline;
+    width: 400px;
+}
+#posterImage{
+    width: 400px;
+    height: 700px;
+}
+
+#showWatchlist{
+     
+    width: 200px
+}
