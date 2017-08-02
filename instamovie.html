@@ -27,8 +27,8 @@
 
 <body>
   
-
-    <div id="topNavigator">
+<header id="topNavigator">
+        
         <ul id="topmenu">
             <li id="logo">InstaMovie</li>
             <li class="movieCategory" id="top_rated">Top Rated</li>
@@ -47,37 +47,33 @@
 
 
         </div>
-    </div>
-    <ul id="movie">
-        <li class="poster-desc" id="poster">
+    
+</header>
+    <div id="movie" class="clearfix">
+        <div class="poster-desc" id="poster">
             <img id="posterImage">
-        </li>
-        <li class="poster-desc">
-           <ul id = "movieDescription">
-            <li id="movieTitle">
-
-            </li>
-            <li id="voteAverage">
-
-            </li>
-            <li id="overview">
-
-            </li>
-            </ul>
-        </li>
-    </ul>
-    <div id="watchlistContainer">
+        </div>
+        <div class="poster-desc" id="desc">
+             <h3 id="movieTitle">
+            </h3>
+            <p id="voteAverage">
+            </p>
+            <h3 class="overview">Overview</h3>
+            <p id="overview">
+            </p>
+            
+        </div>
+    </div>
+    <div id="watchlistContainer" class="clearfix">
         <ol id="watchlist">
         </ol>
 
     </div>
-    </div>
-    </nav>
-
-    </div>
+    
     <script src="./instamovie.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+<footer id="footer">Copyright &copy; Moon and James</footer>
 </body>
 
 </html>
