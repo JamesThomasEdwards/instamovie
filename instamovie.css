@@ -2,6 +2,16 @@
 body { 
     padding-top: 100px; 
     }
+footer{
+     
+    width: 100%; /* Full width */
+     background-color:#081c24;
+     color: white;
+     text-align: center;
+     height: 50px;
+     padding:15px;
+    
+}
 #logo {
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
 	font-size: 50px;
@@ -14,14 +24,7 @@ body {
     margin-right: 50px;
 }
 
-#top-navigation {
 
-    background-color: navy;
-    list-style-type: none;
-    margin: 0;
-    padding: 30px;
-
-}
 
 #topmenu {
 
@@ -44,12 +47,16 @@ body {
     border: 2px solid;
     border-radius: 15px;
     margin: 30px;
+    margin-top: 15px;
+    margin-bottom:15px;
     width: 100px;
 
 }
 #pass-add-container{
     text-align: center;
     background-color: white;
+    border-bottom: 1px solid;
+    border-color: #081c24;
     
 }
 #topNavigator{
@@ -59,13 +66,23 @@ body {
 
 }
 
+
+
 #movie{
-    margin-top: 140px;
-    width:800px;
+    margin-top: 130px;
+    margin-left: 10px;
+    width:900px;
+    border:1px solid;
+    
 }
-.poster-desc{
-    display: inline;
-    width: 400px;
+
+#poster{
+    float:left;
+}
+#desc{
+    margin-left:350px;
+    padding-left:100px;
+    margin-top:50px;
 }
 #posterImage{
     width: 400px;
@@ -75,4 +92,26 @@ body {
 #showWatchlist{
      
     width: 200px
+}
+.clearfix.after{
+         display:block;
+         line-height: 0;
+         height:0;
+         clear: both;
+}
+#movieTitle{
+    font-family : "Arial Black", "Arial Bold", Gadget, sans-serif;
+    font-size: 40px;
+}
+#voteAverage{
+    font-family : "Arial Black", "Arial Bold", Gadget, sans-serif;
+    font-size: 25px;
+}
+.overview{
+    font-family : "Arial Black", "Arial Bold", Gadget, sans-serif;
+    font-size: 20px;
+}
+#overview{
+     font-family : "Arial", Gadget, sans-serif;
+    font-size: 18px;
 }
