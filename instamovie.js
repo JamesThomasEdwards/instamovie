@@ -7,6 +7,7 @@
 var movieCategorySelector = "";
 var currentMovieTitle;
 var currentMovieOverview;
+var currentMovieCategory;
 
 $("#getMovie").click(
     getMovie
@@ -20,6 +21,21 @@ $('#addMovie').click(
 $('#showWatchlist').click(
     showWatchlist
 )
+$('#topmenu li').click(function(){
+    console.log($(this).text())
+    if($(this).text()==='Top Rated'){
+        currentMovieCategory = "top_rated";
+    }else if($(this).text()==='Popular'){
+        currentMovieCategory = "popular";
+    }else if($(this).text()==='Now Playing'){
+        currentMovieCategory = "now_playing";
+    }else if($(this).text()==='Upcoming'){
+        currentMovieCategory = "upcoming";
+    }
+    
+    getMovie();
+})
+
 
 function showWatchlist() {
     var watchlist = {};
@@ -48,8 +64,8 @@ function addMovie() {
 }
 
 function getMovie() {
-    movieCategorySelector = $("#movieCategory").val();
-    var url = 'https://api.themoviedb.org/3/movie/' + movieCategorySelector + '?api_key=d8d94bcf898938939d96dd422b52b026'
+    var movieCategory = currentMovieCategory;
+    var url = 'https://api.themoviedb.org/3/movie/' + movieCategory + '?api_key=d8d94bcf898938939d96dd422b52b026'
     movie(url);
 
 }
@@ -109,5 +125,33 @@ function movie(url) {
     })
 
 }
+var provider = new firebase.auth.GoogleAuthProvider();
 
+function googleSignin() {
+   firebase.auth()
+   
+   .signInWithPopup(provider).then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+		
+      console.log(token)
+      console.log(user)
+   }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+		
+      console.log(error.code)
+      console.log(error.message)
+   });
+}
+
+function googleSignout() {
+   firebase.auth().signOut()
+	
+   .then(function() {
+      console.log('Signout Succesfull')
+   }, function(error) {
+      console.log('Signout Failed')  
+   });
+}
 

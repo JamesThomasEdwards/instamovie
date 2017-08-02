@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="instamovie.css">
 
-    <title>title</title>
+    <title>InstaMovie</title>
 
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     <script>
@@ -19,7 +19,6 @@
             messagingSenderId: "211602683439"
         };
         firebase.initializeApp(config);
-
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -27,67 +26,46 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div>
-                <span><img src="logo.png"></span>
-
-            </div>
-            <span>Select Movies</span>
-            <select id="movieCategory">
-      <option value="All">All</option>
-  <option value="popular">Most Popular</option>
-  <option value="top_rated">Top Rated</option>
-  <option value="now_playing">Now Playing</option>
-  <option value="upcoming">Upcoming</option>
-</select>
-
-            <span> Genre </span>
-            <select id="genre">
-      <option value="All">All</option>
-  <option value="Action">Action</option>
-  <option value="Adventure">Adventure</option>
-  <option value="Animation">Animation</option>
-  <option value="Comedy">Comedy</option>
-  <option value="Crime">Crime</option>
-  <option value="Documentary">Documentary</option>
-  <option value="Drama">Drama</option>
-  <option value="Fantasy">Fantasy</option>
-  <option value="History">History</option>
-  <option value="Horror">Horror</option>
-  <option value="Music">Music</option>
-  <option value="Mystery">Mystery</option>
-  <option value="Romance">Romance</option>
-  <option value="Science Fiction">Science Fiction</option>
-  <option value="TV Movie">TV Movie</option>
-  <option value="Thriller">Thriller</option>
-  <option value="War">War</option>
-  <option value="Western">Western</option>
-
   
-</select>
-            <button type="submit" id="getMovie">Get Movie</button>
-            <div>
-                <button type="sumbit" id="pass">Pass</button>
-                <button type="sumbit" id="addMovie">Add Movie</button>
-                <button type="sumbit" id="showWatchlist">Watch List</button>
-            </div>
-    </nav>
 
-    <div id="movie">
-        <div id="movieTitle">
+    <div id="topNavigator">
+        <ul id="topmenu">
+            <li id="logo">InstaMovie</li>
+            <li class="movieCategory" id="top_rated">Top Rated</li>
+            <li class="movieCategory" id="polular">Popular</li>
+            <li class="movieCategory" id="now_playing">Now Playing</li>
+            <li class="movieCategory" id="upcoming">Upcoming</li>
+            
+        </ul>
+        <div id="pass-add-container">
+            <button type="submit" class="pass-add" id="pass">PASS</button>
+            <button type="submit" class="pass-add" id="addMovie">ADD</button>
+            <button type="sumbit" class="pass-add" id="showWatchlist">Watch List</button>
+            <button onclick = "googleSignin()">Google Signin</button>
+            <button onclick = "googleSignout()">Google Signout</button>
 
-        </div>
-        <div id="voteAverage">
 
-        </div>
-        <div id="overview">
 
-        </div>
-        <div id="poster">
-            <img id="posterImage">
         </div>
     </div>
+    <ul id="movie">
+        <li class="poster-desc" id="poster">
+            <img id="posterImage">
+        </li>
+        <li class="poster-desc">
+           <ul id = "movieDescription">
+            <li id="movieTitle">
+
+            </li>
+            <li id="voteAverage">
+
+            </li>
+            <li id="overview">
+
+            </li>
+            </ul>
+        </li>
+    </ul>
     <div id="watchlistContainer">
         <ol id="watchlist">
         </ol>
