@@ -73,6 +73,7 @@ footer{
     margin-left: 10px;
     width:900px;
     border:1px solid;
+    float:left;
     
 }
 
@@ -83,12 +84,19 @@ footer{
     margin-left:350px;
     padding-left:100px;
     margin-top:50px;
+    padding-right:10px;
 }
 #posterImage{
     width: 400px;
     height: 700px;
 }
-
+#watchlistTitle{
+    font-family : "Arial Black", "Arial Bold", Gadget, sans-serif;
+    font-size: 40px;
+    margin-left: 0px;
+    text-align:left;
+    padding-bottom:15px;
+}
 #showWatchlist{
      
     width: 200px;
@@ -116,13 +124,26 @@ footer{
     font-size: 18px;
 }
 #watchlistContainer {
-position: absolute;
-right: 0px;
-top: 230px;
+    
+    margin-top:130px;
+    text-align: left;
+    
+    margin-left:950px;
+    
+
 }
 
 #watchlist {
     font-family: "Arial", Gadget, sans-serif;
     font-size: 20px;
-    margin-right: 20px;
+    padding-left:100px;
+    padding-top:30px;
+    width: 700px;
+    height: 700px;
+    overflow: scroll;
+    border: 1px solid;
+}
+#star{
+    width:25px;
+    height:25px;
 }
