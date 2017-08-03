@@ -91,7 +91,7 @@ footer{
 
 #showWatchlist{
      
-    width: 200px
+    width: 200px;
 }
 .clearfix.after{
          display:block;
@@ -114,4 +114,15 @@ footer{
 #overview{
      font-family : "Arial", Gadget, sans-serif;
     font-size: 18px;
+}
+#watchlistContainer {
+position: absolute;
+right: 0px;
+top: 230px;
+}
+
+#watchlist {
+    font-family: "Arial", Gadget, sans-serif;
+    font-size: 20px;
+    margin-right: 20px;
 }

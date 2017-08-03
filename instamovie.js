@@ -55,6 +55,7 @@ function showWatchlist() {
     })
 
 }
+
 function addMovie() {
     var database = firebase.database()
     var movies = database.ref("movies");
