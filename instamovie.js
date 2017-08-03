@@ -7,8 +7,11 @@
 var movieCategorySelector = "";
 var currentMovieTitle;
 var currentMovieOverview;
-var currentMovieCategory;
+var currentMovieCategory='top_rated';
 
+$().ready(function(){
+    getMovie();
+})
 $("#getMovie").click(
     getMovie
 );
@@ -46,6 +49,10 @@ function showWatchlist() {
         console.log(dataSnapshot.val());
         watchlist = dataSnapshot.val();
         console.log(watchlist);
+       
+        $('#watchlist').empty()
+        $('#watchlist').append('<h1 id="watchlistTitle">Watch List</h1>')
+
         for (var list in watchlist) {
             console.log(watchlist[list].title);
             $('#watchlist').append('<li>'+watchlist[list].title+'</li>')
@@ -108,19 +115,6 @@ function movie(url) {
 
             console.log(movieNumber, moviePage, movieIndex);
 
-            // $.ajax({
-            //     type: 'GET',
-            //     url: url + '&page=' + randomMovie(data.results.length, pageNumbers).page,
-            //     dataType: 'json',
-            //     success: function () {
-            //         var movie = data.results[randomMovie(data.results.length)];
-
-
-            //         $("#movieTitle").text(movie.title);
-            //         $("#posterImage").attr("src", "http://image.tmdb.org/t/p/w500/fn4n6uOYcB6Uh89nbNPoU2w80RV.jpg")
-
-            //     }
-            // })
 
         }
     })
